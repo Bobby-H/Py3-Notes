@@ -42,25 +42,11 @@ class InsurancePolicy:
   def __init__(self, price_of_item):
     self.price_of_insured_item = price_of_item
 
-#class Chess:
-#  def __init__(self, board, pieces):
-#    self.board = setup_board()
-#    self.pieces = add_chess_pieces()
-#  def play(self):
-#    print('Playing chess!')
-#
-#class Checkers:
-#  def __init__(self):
-#    self.board = setup_board()
-#    self.pieces = add_checkers_pieces()
-#  def play(self):
-#    print('Playing checkers!')
-#
-#def play_game(chess_or_checkers):
-#  chess_or_checkers.play()
-#  chess_game = Chess()
-#  checkers_game = Checkers()
-#  chess_game2 = Chess()
-#
-#for game in [chess_game, checkers_game, #chess_game2]:
-#  play_game(game)
+class VehicleInsurance(InsurancePolicy):
+  def get_rate(self):
+    return .001 * self.price_of_item
+
+class HomeInsurance(InsurancePolicy):
+  def get_rate(self):
+    self.price_of_item = price_of_item
+    return .00005 * price_of_item
