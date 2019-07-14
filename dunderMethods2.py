@@ -46,10 +46,18 @@
 #  print("Since when do we allow Frank to delete things? Does no one remember when he accidentally deleted the site?")
 #Above we created a set of users and then added them to UserGroups with specific permissions. Then we used Python built-in functions and syntax to calculate the length of a UserGroup, to iterate through a UserGroup and to check for a User‘s membership in a UserGroup.
 #
+class LawFirm:
+  def __init__(self, practice, lawyers):
+    self.practice = practice
+    self.lawyers = lawyers
 #Instructions
 #1.
 #In script.py you’ll find the class LawFirm. Give LawFirm a .__len__() method that will return the number of lawyers in the law firm.
 #
-
+  def __len__(self):
+    return len(self.lawyers)
 #2.
 #Give LawFirm a .__contains__() method that takes two parameters: self and lawyer and checks to see if lawyer is in self.lawyers.
+  def __contains__(self, lawyer):
+    if lawyer in self.lawyers:
+      return True
