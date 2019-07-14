@@ -61,3 +61,5 @@ class LawFirm:
   def __contains__(self, lawyer):
     if lawyer in self.lawyers:
       return True
+
+d_and_p = LawFirm("Injury", ["Donelli", "Paderewski"])
